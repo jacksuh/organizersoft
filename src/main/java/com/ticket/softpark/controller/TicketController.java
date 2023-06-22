@@ -27,7 +27,7 @@ public class TicketController {
     }
 
     @GetMapping
-    public ResponseEntity <Page<Ticket>> getTickets(Pageable page){
+    public ResponseEntity <Page<Ticket>> pegarTickets(Pageable page){
         Page<Ticket> list = service.getAll(page);
         return ResponseEntity.ok(list);
     }
