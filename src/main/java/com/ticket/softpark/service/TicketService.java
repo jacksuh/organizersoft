@@ -5,6 +5,8 @@ import com.ticket.softpark.exception.ValidationException;
 import com.ticket.softpark.model.Ticket;
 import com.ticket.softpark.repository.TicketRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
 
@@ -13,6 +15,11 @@ public class TicketService {
 
     @Autowired
     private TicketRepository repository;
+
+
+    public Page<Ticket> getAll(Pageable page) {
+        return repository.findAll(page);
+    }
 
     public Ticket saveTicket(TicketDto dto) {
         Optional<Ticket> ticket = Optional.ofNullable(repository.findByTicket(dto.ticket()));
