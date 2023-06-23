@@ -42,7 +42,7 @@ public class TicketController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteTicket(@PathVariable Long id){
+    public ResponseEntity deletarTicket(@PathVariable Long id){
         service.deleteTicket(id);
         return ResponseEntity.ok().build();
     }
