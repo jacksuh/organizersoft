@@ -55,4 +55,13 @@ public class TicketService {
 
             return repository.save(tk);
         }
+
+
+    public void deleteTicket(Long id) {
+        Optional<Ticket> tk = repository.findById(id);
+        if (tk.isPresent()) {
+            repository.deleteById(id);
+        }
+
+    }
 }

@@ -1,5 +1,4 @@
 package com.ticket.softpark.controller;
-
 import com.ticket.softpark.dto.TicketDetailingDto;
 import com.ticket.softpark.dto.TicketDto;
 import com.ticket.softpark.model.Ticket;
@@ -42,6 +41,9 @@ public class TicketController {
                 ResponseEntity.ok(p) : ResponseEntity.notFound().build();
     }
 
-
-
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteTicket(@PathVariable Long id){
+        service.deleteTicket(id);
+        return ResponseEntity.ok().build();
+    }
 }
