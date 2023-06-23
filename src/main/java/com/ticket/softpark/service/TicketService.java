@@ -42,4 +42,17 @@ public class TicketService {
             return savedticket;
         }
     }
+        public Ticket updateTicket(TicketDto dto, Long id) {
+            Optional<Ticket> optional = repository.findById(id);
+            Ticket tk = optional.get();
+            tk.setTicket(dto.ticket());
+            tk.setAutor(dto.autor());
+            tk.setPrazo(dto.prazo());
+            tk.setDescricao(dto.descricao());
+            tk.setDesenvolvedor(dto.desenvolvedor());
+            tk.setPrioridade(dto.prioridade());
+            tk.setStatus(dto.status());
+
+            return repository.save(tk);
+        }
 }

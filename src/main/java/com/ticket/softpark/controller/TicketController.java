@@ -32,4 +32,16 @@ public class TicketController {
         return ResponseEntity.ok(list);
     }
 
+
+    @PutMapping("/{id}")
+    public ResponseEntity atualizarTickets(@PathVariable("id") Long id, @RequestBody TicketDto dto){
+
+        Ticket p = service.updateTicket(dto,id);
+
+        return p != null?
+                ResponseEntity.ok(p) : ResponseEntity.notFound().build();
+    }
+
+
+
 }
