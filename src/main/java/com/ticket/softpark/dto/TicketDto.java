@@ -1,5 +1,4 @@
 package com.ticket.softpark.dto;
-
 public record TicketDto(
         String ticket,
         String prioridade,

@@ -1,5 +1,4 @@
 package com.ticket.softpark.service;
-
 import com.ticket.softpark.dto.TicketDto;
 import com.ticket.softpark.exception.ValidationException;
 import com.ticket.softpark.model.Ticket;

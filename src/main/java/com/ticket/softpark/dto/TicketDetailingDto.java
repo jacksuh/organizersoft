@@ -1,5 +1,4 @@
 package com.ticket.softpark.dto;
-
 import com.ticket.softpark.model.Ticket;
 
 public record TicketDetailingDto(
