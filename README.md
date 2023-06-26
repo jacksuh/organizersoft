@@ -6,7 +6,6 @@ Api Books Armazenamento de cadastro de livro como lista e por genero.
 - [x] Criação das classes
 - [x] Classe ticket.
 
-
 ## Ticket:
 Cadastro de ticket<br>
 Listar de ticket.<br>
