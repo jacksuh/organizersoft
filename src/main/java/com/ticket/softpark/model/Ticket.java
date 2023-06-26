@@ -13,21 +13,21 @@ public class Ticket {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    Long id;
+    private Long id;
 
-    String ticket;
+    private String ticket;
 
-    String prioridade;
+    private String prioridade;
 
-    String descricao;
+    private String descricao;
 
-    String desenvolvedor;
+    private String desenvolvedor;
 
-    String autor;
+    private String autor;
 
     @Enumerated(EnumType.STRING)
     private  Status status;
 
-    String prazo;
+    private String prazo;
 
 }
