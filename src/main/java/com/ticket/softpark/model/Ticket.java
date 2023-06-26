@@ -25,7 +25,8 @@ public class Ticket {
 
     String autor;
 
-    String status;
+    @Enumerated(EnumType.STRING)
+    private  Status status;
 
     String prazo;
 
