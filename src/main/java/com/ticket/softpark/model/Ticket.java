@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -28,6 +30,6 @@ public class Ticket {
     @Enumerated(EnumType.STRING)
     private  Status status;
 
-    private String prazo;
+    private Date prazo;
 
 }
