@@ -30,6 +30,6 @@ public class Ticket {
     @Enumerated(EnumType.STRING)
     private  Status status;
 
-    private Date prazo;
+    private String prazo;
 
 }
