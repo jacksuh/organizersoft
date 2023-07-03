@@ -1,4 +1,5 @@
 package com.ticket.softpark.dto;
+import com.ticket.softpark.model.Status;
 import com.ticket.softpark.model.Ticket;
 
 public record TicketDetailingDto(
@@ -9,7 +10,7 @@ public record TicketDetailingDto(
         String descricao,
         String desenvolvedor,
         String autor,
-        String status,
+        Status status,
         String prazo
 )
 {
