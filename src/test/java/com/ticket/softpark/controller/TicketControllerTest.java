@@ -18,7 +18,7 @@ class TicketControllerTest {
     @Test
     void salvarTicket() throws Exception{
 
-        String json = "{\"nome\":\"Jackson\",\"pesoAtual\":\"82\",\"altura\":\"1.78\"}";
+        String json = "{\"nome\":\"Jackson\",\"ticket\":\"82\",\"altura\":\"1.78\"}";
 
         var response = mvc.perform(
                         post("/ticket")
