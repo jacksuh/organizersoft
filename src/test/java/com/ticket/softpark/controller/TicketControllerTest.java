@@ -48,6 +48,15 @@ class TicketControllerTest {
     }
 
     @Test
-    void deletarTicket() {
+    void deletarTicket() throws Exception{
+
+        var response = mvc
+                .perform(delete("/ticket/{id}", 1L)
+                        .contentType(MediaType.APPLICATION_JSON)
+                )
+                .andReturn().getResponse();
+
+        assertThat(response.getStatus()).isEqualTo(HttpStatus.OK.value());
+
     }
 }
