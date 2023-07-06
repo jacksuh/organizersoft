@@ -42,7 +42,19 @@ class TicketControllerTest {
         }
 
     @Test
-    void atualizarTickets() {
+    void atualizarTickets() throws Exception {
+
+        String json = "{\"nome\":\"Jackson\",\"pesoAtual\":\"82\",\"altura\":\"82\"}";
+
+        var response = mvc.perform(
+                        put("/ticket/{id}", 1L)
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(json)
+                )
+                .andReturn().getResponse();
+
+        assertThat(response.getStatus()).isEqualTo(HttpStatus.OK.value());
+
 
 
     }
