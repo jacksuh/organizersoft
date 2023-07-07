@@ -1,4 +1,5 @@
 package com.ticket.softpark.controller;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,6 +15,16 @@ class TicketControllerTest {
 
     @Autowired
     private MockMvc mvc;
+
+
+    @Test
+    @DisplayName("Teste erro 400")
+    void criarPaciente() throws Exception{
+        var response = mvc.perform(post("/paciente"))
+                .andReturn().getResponse();
+
+        assertThat(response.getStatus()).isEqualTo(HttpStatus.BAD_REQUEST.value());
+    }
 
     @Test
     void salvarTicket() throws Exception{
