@@ -14,7 +14,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 @RequestMapping("ticket")
 public class TicketController {
 
-
     @Autowired
     private TicketService service;
 
